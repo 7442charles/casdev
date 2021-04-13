@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600");
+/*@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600");*/
 /*
 	Industrious by TEMPLATED
 	templated.co @templatedco
@@ -2392,7 +2392,7 @@ body {
   padding-top: 3.25rem; }
   body:before {
     content: ' ';
-    background-image: url(../../images/bg.jpg);
+    /*background-image: url(../../images/bg.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -2499,7 +2499,7 @@ body {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), url("../../images/banner.jpg");
+  /*background-image: linear-gradient(rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), url("../../images/banner.jpg");*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2823,33 +2823,6 @@ body.is-menu-visible #menu {
   box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
   visibility: visible;
 }
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.show {
-  display:block;
-} 
-
-/*.financeheader{
-  color: #b71824;
-}*/
-
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -2874,3 +2847,30 @@ body.is-menu-visible #menu {
   transition: 0.3s
 }
  
+
+/*.dropdown-content a {
+  /*color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {
+  display:block;
+} 
+.dropdown{
+  /*display: flex;*/
+  align-content: center;
+  padding-left: 5px;
+  flex-direction: column;
+}

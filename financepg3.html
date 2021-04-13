@@ -15,7 +15,13 @@
 			<header id="header">
 				<a class="logo" href="#index"><b>C.R.</b></a>
 				<nav>
-					<a href="index.html"><b>Home</b></a>
+					<div class="dropdown" style="border: 1px solid black;">
+						<button class="dropbtn" onclick="myFunction()">Theme</button>
+						<div class="dropdown-content" id="myDropdown">
+						<button class="darkTheme" onclick="darkTheme()">Dark</button>
+						<button class="LightTheme" onclick="lightTheme()">Light</button>
+						</div>
+					</div>
 				</nav>
 			</header>
 
@@ -543,6 +549,7 @@
 
 		<!-- Scripts -->
 			<script src="js/main.js"></script>
+            <script src="js/main2.js"></script>
 
 	</body>
 </html>

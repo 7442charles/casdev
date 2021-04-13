@@ -107,9 +107,16 @@ if (!e.target.matches('.dropbtn')) {
 }
 
 function darkTheme(){
-  //document.getElementsByClassName('darkTheme');
-  var body = document.getElementsByClassName('financeheader');
-  //body.style.backgroundcolor = "black";
-  body.style.color = "black";
-  console.log('darktheme clicked');
+  var mainSection = document.getElementById('wrapper2')
+  var x =document.getElementById('main');
+  x.style.backgroundColor = "black";
+  mainSection.style.backgroundColor = "black";
+  mainSection.style.color = "green";
 } 
+ function lightTheme(){
+  var mainSection = document.getElementById('wrapper2')
+  var x =document.getElementById('main');
+  x.style.backgroundColor = "white";
+  mainSection.style.backgroundColor = "white";
+  mainSection.style.color = "black"; 
+ }
