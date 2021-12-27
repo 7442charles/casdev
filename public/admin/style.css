@@ -1,0 +1,20 @@
+.common_style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jumbotron{
+    background-color:aliceblue ;
+    color: black;
+    font-weight: 60px bold;
+    height: 80px;
+}
+.sidebar{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.sidebar .content{
+    flex: 1 1 auto;
+    border:1px solid darkslategray;
+}

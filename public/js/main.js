@@ -50,3 +50,43 @@ jQuery(document).ready(function($) {
 
 
 });
+
+
+
+
+/*when the index loads this should check if the user is logged in 
+if yes continue if no load the login&reg doc */
+//window.onload(login_redirect());
+
+function login_redirect(){
+  window.location= "login&register.html";
+}
+function validate(){
+  let logAdmNo = document.getElementById('login_admNo').value;
+  let logpass =document.getElementById('login_password').value;
+  if (logAdmNo =='') {
+    document.getElementById('login_admNo').focus();
+    console.log('logadm empty');
+  }else if (logpass =='') {
+    document.getElementById('login_password').focus();
+    console.log('logpass empty');
+  }else{
+    logAdmNo= logAdmNo.toLowerCase();
+    console.log(logAdmNo);
+  }
+}
+
+Notification.requestPermission(function() {
+  if (Notification.permission === 'granted') {
+  // user approved.
+  // use of new Notification(...) syntax will now be successful
+  } else if (Notification.permission === 'denied') {
+  // user denied.
+  } else { // Notification.permission === 'default'
+  // user didn’t make a decision.
+  // You can’t send notifications until they grant permission.
+  }
+  });
+
+  //new Notification('Hello', { body: 'Hello, world!', icon: 'favicon.ico' });  
+
