@@ -102,14 +102,18 @@ body {
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
 
-.classRow{
+.specialize, .classRow{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   /*border: 1px solid black;
   border-radius: 5px;*/
 }
-.room{
-  border-right:1px black;
+.msghead{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#theMsg{
   border-radius: 5px;
 }
