@@ -1,0 +1,19 @@
+Add a floating button with a label
+        if the user has notifications, the button will appear with the label showing number of notifications
+        if no new notifications the button is not displayed
+        reduces cloud messaging stress
+
+
+classes
+        an array of students 
+        dashboard design like with list of students listed on the right end
+        on the left you can navigate between students post/ question and lecs post/questions
+        ability to submit assignments
+        STUDENTS SECTION
+            student name is displayed on top of post/question
+        LECS SECTION
+            all data is displayed =>all notes posted, posts,
+            students are able to comment on specific post => student name is displayed
+
+alert color #155724;            
+        

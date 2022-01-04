@@ -117,3 +117,11 @@ body {
 #theMsg{
   border-radius: 5px;
 }
+.classAction{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#success_modal{
+  color: #155724;  
+}

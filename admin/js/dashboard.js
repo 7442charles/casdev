@@ -1,5 +1,5 @@
 function select(el) {
-  return document.querySelector(el)
+  return document.querySelector(el);
 }
 var classroom = select('#classroom');
 var work_area = select('.workArea');
@@ -9,22 +9,36 @@ var classRow = select('.classRow');
 
 classroom.addEventListener('click', manageClassrooms);
 function manageClassrooms() {
-  let classlist = `<div class="classRow">
-  <div class="dhm room">DHM classes</div>
-  <div class="dht room">DHT classes</div>
-  <div class="tourism room">Tourism classes</div>
-  <div class="dca room">DCA classes</div>
-  <div class="dpc room">DPC classes</div>
-  <div class="it room">IT classes</div>
-  <div class="events room">Event classes</div>
+  let classlist = `
+  <div class="classRow">
+  <div class="dhm_room btn btn-info">DHM classes</div>
+  <div class="dht_room btn btn-info">DHT classes</div>
+  <div class="tourism_room btn btn-info">Tourism classes</div>
+  <div class="dca_room btn btn-info">DCA classes</div>
+  <div class="dpc_room btn btn-info">DPC classes</div>
+  <div class="it_room btn btn-info">IT classes</div>
+  <div class="events_room btn btn-info">Event classes</div>
   </div>`;
-  return work_area.innerHTML = classlist; 
+
+  //adding action buttons on class page
+  var classAction = select('#classAction');
+  classAction.innerHTML = `
+    <button type="button" class="btn btn-sm btn-outline-secondary" id="create_room" data-toggle="modal" data-target="#create_room_modal">Create Room</button>
+    <button type="button" class="btn btn-sm btn-outline-secondary" id="delete_room">Delete Room</button>`;
+  var create_room_btn = select('#createbtn');
+  create_room_btn.addEventListener('click', room_created_success);
+  work_area.innerHTML = classlist; 
+  
+}
+function clear_class_action() {
+  classAction.remove();
 }
 
 //send page template literal
 var send_message = select('#message');
 send_message.addEventListener('click', sendMsg);
 function sendMsg() {
+  clear_class_action();
   let msgbody = `<div class="msg">
       <h2 class="msghead">Send msg </h2><br />
       <div class="specialize">
@@ -76,12 +90,11 @@ function initEl() {
   var send_btn = select('.send');
   send_btn.addEventListener('click', sending_msg);
 }
-
+let no_of_students = Math.floor(Math.random()*500);
 //sending message
 function sending_msg() {
   let data = select('#theMsg').value;
   let data_title = select('#messageTitle').value;
-  let no_of_students = Math.floor(Math.random()*500);
   if (data =="") {
     select('#theMsg').focus();
   } else if(data_title =="") {
@@ -116,3 +129,22 @@ function closeAlert() {
   var alert_to_close = select('.alert');
   alert_to_close.remove();
 }
+
+/*working on classes*/
+// function to create new class
+    //be able to add student to classes
+    //can remove students from a class
+
+function room_created_success() {
+  let className = select('#class_Name').value;
+  console.log("classname =", className);
+  let modal_body = select('#success_modal');
+  modal_body.innerHTML = `<strong>${className}</strong> has been created and <strong>${no_of_students}</strong> were added.`
+}    
+
+
+// function to delete a class
+    //notifies students of class deletion
+    //dletion waits for 24hrs
+    //deletion can be cancelled by admin/lecture
+    //deletes all class data
