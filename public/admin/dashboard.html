@@ -7,12 +7,8 @@
     <meta name="generator" content="Hugo 0.88.1">
     <title> Admin Dashboard </title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/dashboard/">
-
-    
-
     <!-- Bootstrap core CSS -->
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
 
 
@@ -52,7 +48,6 @@
   </ul>
 </nav>
 
-
 <div class="container-fluid">
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -65,34 +60,19 @@
             </a>
           </li>
           <li class="nav-item" id="classroom">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              Manage Classrooms
-            </a>
+              <span class="nav-link">Classrooms</span>
           </li>
           <li class="nav-item" id="message">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart"></span>
-              Send Messages
-            </a>
+            <span class="nav-link">Messages</span>
           </li>
           <li class="nav-item" id="examResults">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Exam Results
-            </a>
+            <span class="nav-link">Exam Results</span>
           </li>
           <li class="nav-item" id="units">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              Unit Registration
-            </a>
+            <span class="nav-link">Unit Registration</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              Exam Cards
-            </a>
+            <span class="nav-link">Exam cards</span>
           </li>
         </ul>
       </div>
@@ -102,37 +82,124 @@
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group mr-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          <div class="btn-group mr-2" id="classAction">
+            
           </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar"></span>
-            This week
-          </button>
         </div>
       </div>
 
-
+      <!--dashboard work area-->
       <div class="workArea">
-        
+        <div class="specialize">
+          <span><b>Target group:</b></span>
+          <span>Course: 
+            <select name="course name" id="course_select">
+              <option>DHM</option>
+              <option>DHT</option>
+              <option>DCA</option>
+              <option>DPC</option>
+              <option>ICT</option>
+            </select>
+          </span>
+          <span class="intakeYear">
+            Select Year:
+            <select name="" id="intake_year">
+              <option>2018</option>
+              <option>2019</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2022</option>
+            </select>
+          </span>
+          <span class="intakeMonth">
+            select month:
+            <select name="" id="intake_month">
+              <option>Jan</option>
+              <option>May</option>
+              <option>sep</option>
+            </select>
+          </span>  
+          <span class="unit_no">
+            Unit No:
+            <select name="" id="intake_month">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+            </select>
+          </span>  
+          <span><button class="btn btn-info btn-sm">Add Units</button></span>
+        </div>
       </div>
+      <!--end dashboard work area-->
       
+      <!--create room modal-->
+      <div id="create_room_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Create Room</h4>
+            </div>
+            <div class="modal-body">
+              <div>Class Name: <input type="text" id="class_Name"></div>
+                &nbsp;&nbsp;
+              <div>Course Name: <input type="text"></div>
+                &nbsp;&nbsp;
+              <div>Intake Year:
+                <select id="create_class_year">
+                  <option>2018</option>
+                  <option>2019</option>
+                  <option>2020</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                </select>
+              </div>
+                &nbsp;&nbsp;
+              <div>Intake Month:
+                <select id="create_class_year">
+                  <option>Jan</option>
+                  <option>May</option>
+                  <option>sep</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#room_success" id="createbtn">Create</button>
+            </div>
+          </div>
+    
+        </div>
+      </div><!--end of create room modal-->
 
+      <!--room created success-->
+      <div id="room_success" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body" id="success_modal">
+              
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      <!--end of create success-->
       
       </div>
     </main>
   </div>
 </div>
 
-
-    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="..js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+      <script src="../js/vendor/jquery-1.11.2.min.js"></script>
       <script src="../js/vendor/bootstrap.min.js"></script>
-
-      
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>-->
-        <script src="js/dashboard.js"></script>
+      <script src="js/dashboard.js"></script>
   </body>
 </html>

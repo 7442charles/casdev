@@ -125,3 +125,9 @@ body {
 #success_modal{
   color: #155724;  
 }
+.common_code{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

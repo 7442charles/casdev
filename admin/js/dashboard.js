@@ -39,7 +39,8 @@ var send_message = select('#message');
 send_message.addEventListener('click', sendMsg);
 function sendMsg() {
   clear_class_action();
-  let msgbody = `<div class="msg">
+  let msgbody = `
+    <div class="msg">
       <h2 class="msghead">Send msg </h2><br />
       <div class="specialize">
         <span><b>Select target group:</b></span>
@@ -68,8 +69,7 @@ function sendMsg() {
             <option>May</option>
             <option>sep</option>
           </select>
-        </span>
-        
+        </span>  
       </div>
       &nbsp;&nbsp;
       <div class="msg_body">
@@ -90,7 +90,9 @@ function initEl() {
   var send_btn = select('.send');
   send_btn.addEventListener('click', sending_msg);
 }
+
 let no_of_students = Math.floor(Math.random()*500);
+
 //sending message
 function sending_msg() {
   let data = select('#theMsg').value;
@@ -140,6 +142,7 @@ function room_created_success() {
   console.log("classname =", className);
   let modal_body = select('#success_modal');
   modal_body.innerHTML = `<strong>${className}</strong> has been created and <strong>${no_of_students}</strong> were added.`
+
 }    
 
 
@@ -148,3 +151,7 @@ function room_created_success() {
     //dletion waits for 24hrs
     //deletion can be cancelled by admin/lecture
     //deletes all class data
+
+
+
+//registering units
