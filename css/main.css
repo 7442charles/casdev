@@ -2877,3 +2877,17 @@ body.is-menu-visible #menu {
   font-size: medium;
 }
 
+.not{
+  text-align: center;
+}
+.navrep{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  color: #aefa0d;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
