@@ -2891,3 +2891,8 @@ body.is-menu-visible #menu {
   font-weight: 900;
   text-transform: capitalize;
 }
+.logo-img{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
